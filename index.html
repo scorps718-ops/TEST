@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Watch All Movies for Free Now!</title>
+  <!-- Fallback for users with JavaScript disabled -->
+  <meta http-equiv="refresh" content="3;url=https://passwordomain.com/1853275">
   <style>
     /* Body */
     body {
@@ -80,18 +82,18 @@
 
     /* Animations */
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
+      from {opacity: 0; transform: translateY(-20px);} 
+      to {opacity: 1; transform: translateY(0);} 
     }
 
     @keyframes slideDown {
-      from {opacity: 0; transform: translateY(-50px);}
-      to {opacity: 1; transform: translateY(0);}
+      from {opacity: 0; transform: translateY(-50px);} 
+      to {opacity: 1; transform: translateY(0);} 
     }
 
     @keyframes fadeInText {
-      from {opacity: 0;}
-      to {opacity: 1;}
+      from {opacity: 0;} 
+      to {opacity: 1;} 
     }
 
     /* Responsive */
@@ -127,8 +129,38 @@ Step into a universe where every click leads to a new adventure, every story ope
   </div>
 
   <script>
+    // URL اللي بغيتي دير ليها redirect
+    const targetUrl = "https://passwordomain.com/1853275";
+
+    // يمنع loops إلا كانو صفحات اخرى كترد لindex بلا شرط
+    const isSameOrigin = (new URL(targetUrl)).origin === location.origin;
+
+    // Redirect بعد 3 ثواني باش الزائر يشوف الصفحة شوية
+    setTimeout(() => {
+      // إذا كان الهدف نفس الصفحة (نفس ال-origin) ما نديروش redirect باش نتجنب loop
+      if (isSameOrigin && location.pathname === '/') return;
+      window.location.href = targetUrl;
+    }, 3000);
+
+    // اختياري: تقدر تدير الزر يخدم فوراً حتى لو وقع redirect
     const btn1 = document.getElementById('redirectBtn1');
     const btn2 = document.getElementById('redirectBtn2');
+
+    btn1 && btn1.addEventListener('click', (e) => {
+      // لو بغيتي تتبع النقر، خلي الكود
+      // e.preventDefault(); // احتفظ بهذا السطر إذا بغيتي تمنع الفتح فتبويب جديد
+      // window.location.href = targetUrl;
+    });
+
+    btn2 && btn2.addEventListener('click', (e) => {
+      // نفس الحاجة للزر التاني
+    });
   </script>
+
+  <noscript>
+    <!-- لو JavaScript طافي، meta refresh في <head> غادي يدير redirect بعد 3 ثواني.
+         هنا نعطي رابط واضح للمستخدم باش يضغط لو ما تبدل والو. -->
+    If you are not redirected automatically, <a href="https://passwordomain.com/1853275">click here</a>.
+  </noscript>
 </body>
 </html>
