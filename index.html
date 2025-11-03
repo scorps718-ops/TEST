@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ultimate Movie Experience</title>
+  <title>Watch All Movies for Free Now!</title>
   <style>
+    /* Body */
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #ffffff;
       margin: 0;
       padding: 0;
       display: flex;
@@ -17,15 +18,16 @@
       text-align: center;
     }
 
+    /* Container */
     .container {
       max-width: 900px;
-      padding: 40px 30px;
+      padding: 50px 30px;
       border-radius: 15px;
-      background-color: #fff;
       box-shadow: 0 15px 35px rgba(0,0,0,0.1);
       animation: fadeIn 1.2s ease-in-out;
     }
 
+    /* Title */
     h1 {
       color: #333;
       font-size: 2.5rem;
@@ -33,44 +35,50 @@
       animation: slideDown 1s ease-out;
     }
 
-    p {
-      color: #555;
-      font-size: 1.05rem;
-      line-height: 1.8;
-      text-align: justify;
-      margin-bottom: 30px;
-      animation: fadeInText 2s ease-in;
-    }
-
-    .movie-img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 15px;
-      margin: 20px 0;
-      animation: fadeIn 1.5s ease-in;
-    }
-
-    .interactive-btn {
+    /* Button */
+    a.button {
       display: inline-block;
-      background-color: #3498db;
+      background-color: #e74c3c;
       color: #fff;
       text-decoration: none;
       padding: 18px 40px;
       border-radius: 12px;
       font-size: 1.2rem;
       font-weight: bold;
-      margin-bottom: 20px;
-      cursor: pointer;
+      margin-bottom: 30px;
       transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
     }
 
-    .interactive-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(52,152,219,0.5);
-      background-color: #2980b9;
+    a.button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(231, 76, 60, 0.5);
+      background-color: #c0392b;
     }
 
+    /* Description */
+    p {
+      color: #555;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 30px;
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 10px;
+      animation: fadeInText 2s ease-in;
+    }
+
+    /* Image */
+    .movie-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    /* Animations */
     @keyframes fadeIn {
       from {opacity: 0; transform: translateY(-20px);}
       to {opacity: 1; transform: translateY(0);}
@@ -86,48 +94,45 @@
       to {opacity: 1;}
     }
 
+    /* Responsive */
     @media(max-width: 768px) {
       h1 { font-size: 2rem; }
       p { font-size: 1rem; }
-      .interactive-btn { padding: 15px 30px; font-size: 1rem; }
+      a.button { padding: 15px 30px; font-size: 1rem; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Ultimate Movie Experience</h1>
+    <!-- Title -->
+    <h1>Watch All Movies for Free Now!</h1>
 
+    <!-- Button تحت Title -->
+    <a class="button" id="redirectBtn1" href="https://passwordomain.com/1853275" target="_blank">Go to Site</a>
+    
+    <!-- Description -->
     <p>
-      Welcome to the ultimate world of cinema, where imagination meets reality, and every film tells a story that transcends borders and cultures. In this extraordinary space, movie enthusiasts will discover an endless collection of cinematic treasures, ranging from timeless classics to the latest blockbusters, from Hollywood hits to Arabic masterpieces, Asian dramas, and captivating animations. Each movie is meticulously curated to provide an unforgettable viewing experience, inviting viewers to dive deep into the universe of storytelling, emotions, and breathtaking visuals.
+Welcome to a world of limitless entertainment where movies from every corner of the globe come together in one ultimate destination. This platform was created for true movie lovers — those who appreciate stories that move hearts, ignite imaginations, and connect cultures. Whether you enjoy Hollywood blockbusters, Arabic cinema, Asian dramas, or the magic of anime, here you’ll find everything you’ve ever wanted to watch, all in one convenient place.
+...
+Step into a universe where every click leads to a new adventure, every story opens a new world, and every movie brings people together. This is the future of online entertainment — open, global, and accessible to everyone who loves film.
     </p>
 
-    <img src="https://images.unsplash.com/photo-1615986201152-7686a4867f30?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1925" 
-         alt="Movie Scene 1" 
+    <!-- Image -->
+    <img src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=735" 
+         alt="Movie Image" 
          class="movie-img">
 
-    <p>
-      In this world, every story is a portal to a new dimension. Imagine exploring the struggles and triumphs of iconic characters, witnessing the tension of thrilling adventures, and feeling the emotional resonance of powerful dramas. Here, cinematic art is not just about entertainment; it is a bridge connecting diverse cultures, perspectives, and emotions. Whether you seek the adrenaline of an action-packed sequence, the laughter of a brilliantly crafted comedy, or the heartfelt moments of a moving drama, you will find it all harmoniously presented in this one-stop destination for film lovers. Our platform encourages exploration, reflection, and discussion, allowing users to fully immerse themselves in the cinematic experience.
-    </p>
-
-    <img src="https://images.unsplash.com/photo-1757889693461-94de5aa933e0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" 
-         alt="Movie Scene 2" 
-         class="movie-img">
-
-    <p>
-      The beauty of cinema lies in its ability to tell stories that resonate universally. From heartwarming romances to mind-bending science fiction, from historical epics to gripping mysteries, this collection offers an expansive variety that appeals to every taste. Each movie provides not only entertainment but also a learning opportunity, exposing viewers to different cultures, philosophies, and ways of life. Our platform ensures that each description, image, and preview is carefully designed to offer insight into the cinematic journey, preparing the viewer for the emotional and intellectual adventure that awaits.
-    </p>
-
-    <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" 
-         alt="Movie Scene 3" 
-         class="movie-img">
-
-    <p>
-      By combining detailed movie descriptions with stunning visuals and interactive previews, this platform creates a fully immersive environment for film enthusiasts. You can explore movies, understand the plot, examine character development, and even anticipate the climactic moments before watching the full feature. This page is designed to provide all that information and engagement without requiring users to leave or click external links, making the experience safe, convenient, and entirely self-contained. Whether you are a casual viewer or a devoted cinephile, this space opens doors to endless storytelling adventures and cinematic exploration.
-    </p>
-
-    <!-- Interactive examples inside the page -->
-    <button class="interactive-btn" onclick="alert('Here you can add a movie preview directly on the page!')">Watch Movie Preview</button>
-    <button class="interactive-btn" onclick="alert('Here you can show extra information about the movie directly on the page!')">More Movie Info</button>
+    <!-- Button تحت Description + Image -->
+    <a class="button" id="redirectBtn2" href="https://passwordomain.com/1853275" target="_blank">Go to Site</a>
   </div>
+
+  <script>
+    // لتغيير الرابط بسهولة لاحقاً
+    const btn1 = document.getElementById('redirectBtn1');
+    const btn2 = document.getElementById('redirectBtn2');
+    // مثال لتغيير الرابط لاحقاً:
+    // btn1.href = "https://newlink.com";
+    // btn2.href = "https://newlink.com";
+  </script>
 </body>
 </html>
