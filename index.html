@@ -35,6 +35,27 @@
       animation: slideDown 1s ease-out;
     }
 
+
+    /* Button */
+    a.button {
+      display: inline-block;
+      background-color: #e74c3c;
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 40px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+
+    a.button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(231, 76, 60, 0.5);
+      background-color: #c0392b;
+    }
+
     /* Description */
     p {
       color: #555;
@@ -78,14 +99,18 @@
     @media(max-width: 768px) {
       h1 { font-size: 2rem; }
       p { font-size: 1rem; }
+      a.button { padding: 15px 30px; font-size: 1rem; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <!-- Title -->
-    <h1>Welcome to the Ultimate Movie World</h1>
+    <h1>Click on “Go to Site” and complete an offer to get your coins on Coinpayu</h1>
 
+    <!-- Button تحت Title -->
+    <a class="button" id="redirectBtn1" href="https://passwordomain.com/1853275" target="_blank">Go to Site</a>
+    
     <!-- Description -->
     <p>
 Welcome to a world of limitless entertainment where movies from every corner of the globe come together in one ultimate destination. This platform was created for true movie lovers — those who appreciate stories that move hearts, ignite imaginations, and connect cultures. Whether you enjoy Hollywood blockbusters, Arabic cinema, Asian dramas, or the magic of anime, here you’ll find everything you’ve ever wanted to watch, all in one convenient place.
@@ -97,6 +122,21 @@ Step into a universe where every click leads to a new adventure, every story ope
     <img src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=735" 
          alt="Movie Image" 
          class="movie-img">
+
+    <!-- Button تحت Description + Image -->
+    <a class="button" id="redirectBtn2" href="https://passwordomain.com/1853275" target="_blank">Go to Site</a>
   </div>
+
+  <script>
+    // لتغيير الرابط بسهولة لاحقاً
+    const btn1 = document.getElementById('redirectBtn1');
+    const btn2 = document.getElementById('redirectBtn2');
+    // مثال لتغيير الرابط لاحقاً:
+    // btn1.href = "https://newlink.com";
+    // btn2.href = "https://newlink.com";
+  </script>
 </body>
 </html>
+
+
+
